@@ -38,4 +38,24 @@ def get_result(percentage):
     else:
         return "Fail"
 
+def main():
+    while True:
+        name = input("Enter student name: ")
 
+        marks_list = []
+        for i in range(1, 6):
+            marks_list.append(get_valid_marks(i))
+
+        total = calculate_total(marks_list)
+        percentage = calculate_percentage(total)
+        grade = get_grade(percentage)
+        result = get_result(percentage)
+
+        print(f"{name} | Total: {total} | Percentage: {percentage:.2f}% | Grade: {grade} | Result: {result}")
+
+        again = input("Another student? (y/n): ")
+        if again.lower() != "y":
+            break
+
+
+main()
