@@ -10,4 +10,32 @@ def get_valid_marks(subject_number):
             return marks
         print("Invalid marks. Enter a number between 0 and 100.")
 
-print("You entered:", get_valid_marks(2))
+
+def calculate_total(marks_list):
+    return sum(marks_list)
+
+
+def calculate_percentage(total):
+    return total / 5
+
+
+def get_grade(percentage):
+    if percentage >= 85:
+        return "A"
+    elif percentage >= 70:
+        return "B"
+    elif percentage >= 55:
+        return "C"
+    elif percentage >= 40:
+        return "D"
+    else:
+        return "F"
+
+
+def get_result(percentage):
+    if percentage >= 40:
+        return "Pass"
+    else:
+        return "Fail"
+
+
